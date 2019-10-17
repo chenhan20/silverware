@@ -2,10 +2,18 @@
   .steve
     h1 QQQQQQQQQ
     a 123
+    h1 {{ title}}
 </template>
 
 <script>
-
+export default {
+  name: "steve",
+  data() {
+    return {
+      title: "steve大哥"
+    };
+  }
+};
 // @ is an alias to /src
 </script>
 
@@ -22,6 +30,6 @@ $phones-media: 480px
     @content
 
 body
-  background: black
+  background: #E7ECF3
 
 </style>
