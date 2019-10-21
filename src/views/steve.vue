@@ -7,9 +7,28 @@
     a count: {{count}}   
     button(@click="add") +
     button(@click="minus") -
+    hr
+    h3 count button(使用vuex)  
+    a count: {{count}}   
+    button(@click="increment") +
+    button(@click="increment") -
 </template>
 
 <script>
+import Vuex from 'vuex'
+
+const store = new Vuex.Store({
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment (state) {
+      state.count++
+    }
+  }
+});
+
+
 export default {
   name: "steve",
   data() {
@@ -24,6 +43,9 @@ export default {
     },
     minus() {
       this.count--;
+    },
+    increment () {
+      store.commit('increment');
     }
   }
 };
