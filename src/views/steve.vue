@@ -9,25 +9,12 @@
     button(@click="minus") -
     hr
     h3 count button(使用vuex)  
-    a count: {{count}}   
+    a count: {{}}   
     button(@click="increment") +
     button(@click="increment") -
 </template>
 
 <script>
-import Vuex from 'vuex'
-
-const store = new Vuex.Store({
-  state: {
-    count: 0
-  },
-  mutations: {
-    increment (state) {
-      state.count++
-    }
-  }
-});
-
 
 export default {
   name: "steve",
@@ -43,10 +30,9 @@ export default {
     },
     minus() {
       this.count--;
-    },
-    increment () {
-      store.commit('increment');
     }
+  },
+  computed:{
   }
 };
 // @ is an alias to /src
