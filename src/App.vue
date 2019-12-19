@@ -4,6 +4,7 @@
       <router-link tag="li" class="col-1" to="/">Home</router-link>
       <router-link tag="li" class="col-1" to="/about">About</router-link>
       <router-link tag="li" class="col-1" to="/steve">Steve</router-link>
+      <router-link tag="li" class="col-1" to="/stock">Stock</router-link>
     </div>
     <router-view />
   </div>
